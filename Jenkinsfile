@@ -11,13 +11,14 @@ pipeline {
         echo "preparing Jenkins CLI"
         withCredentials([usernamePassword(credentialsId: 'cli-username-token', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
           script {
-            sh """
-              alias cli='java -jar jenkins-cli.jar -s \'http://cjoc/cjoc/\' -auth $USERNAME:$PASSWORD'
-              def teams = ['dev', 'sec']
-              teams.each { item ->
+
+            def teams = ['dev', 'sec']
+            teams.each { item ->
+              sh """
+                alias cli='java -jar jenkins-cli.jar -s \'http://cjoc/cjoc/\' -auth $USERNAME:$PASSWORD'
                 cli teams ${item} --put < ${item}-team.json
-              }
-            """
+              """
+            }
           }
         }
       }
