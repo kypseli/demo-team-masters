@@ -3,7 +3,7 @@
         "displayName": "Security Team",
         "icon": {
             "color": "#e38f43",
-            "name": "code"
+            "name": "key"
         },
         "members": [
             {
@@ -14,7 +14,7 @@
             }
         ],
         "provisioningRecipe": "basic",
-        "name": "key"
+        "name": "sec"
     },
     "version": "1"
 }
