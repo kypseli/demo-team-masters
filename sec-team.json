@@ -1,0 +1,20 @@
+{
+    "data": {
+        "displayName": "Security Team",
+        "icon": {
+            "color": "#e38f43",
+            "name": "code"
+        },
+        "members": [
+            {
+                "id": "admin",
+                "roles": [
+                    "TEAM_ADMIN"
+                ]
+            }
+        ],
+        "provisioningRecipe": "basic",
+        "name": "key"
+    },
+    "version": "1"
+}
