@@ -1,10 +1,6 @@
 library 'kypseli@master'
 pipeline {
-  agent {
-    kubernetes {
-      label 'create-team-master'
-    }
-  }
+  agent { label 'default-jnlp' }
   options { 
     buildDiscarder(logRotator(numToKeepStr: '5'))
     preserveStashes(buildCount: 5)
