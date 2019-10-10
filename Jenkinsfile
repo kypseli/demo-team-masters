@@ -9,9 +9,9 @@ pipeline {
     stage('Create Team Managed Masters') {
       steps {
         echo "preparing Jenkins CLI"
+        sh 'curl -O http://cjoc/cjoc/jnlpJars/jenkins-cli.jar'
         withCredentials([usernamePassword(credentialsId: 'cli-username-token', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
           script {
-
             def teams = ['dev', 'sec']
             teams.each { item ->
               sh """
