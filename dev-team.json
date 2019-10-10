@@ -1,0 +1,20 @@
+{
+    "data": {
+        "displayName": "Dev Team",
+        "icon": {
+            "color": "#71a9da",
+            "name": "code"
+        },
+        "members": [
+            {
+                "id": "admin",
+                "roles": [
+                    "TEAM_ADMIN"
+                ]
+            }
+        ],
+        "provisioningRecipe": "basic",
+        "name": "dev"
+    },
+    "version": "1"
+}
