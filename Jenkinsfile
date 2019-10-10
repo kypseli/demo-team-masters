@@ -3,7 +3,6 @@ pipeline {
   agent {
     kubernetes {
       label 'create-team-master'
-      yaml podYaml
     }
   }
   options { 
