@@ -7,6 +7,9 @@ pipeline {
   }
   stages {
     stage('Create Team Managed Masters') {
+      when {
+        branch 'master'
+      }
       steps {
         echo "preparing Jenkins CLI"
         sh 'curl -O http://cjoc/cjoc/jnlpJars/jenkins-cli.jar'
